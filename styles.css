@@ -92,7 +92,7 @@ form h1 {
     color: var(--tt-placeholder);
 }
 
-button {
+form button {
     color: var(--tt-button);
     background: var(--bg-button);
     font-weight: bold;
@@ -111,4 +111,65 @@ button {
 button:hover {
     cursor: pointer;
     background: #016280;
+}
+
+/* Modal */ 
+
+.modal-wrapper.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.modal-wrapper {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.7);
+    inset:0;
+    display: grid;
+    place-content: center;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    position: relative;
+}
+
+.modal button {
+    background: none;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin-right: 1.6rem;
+    margin-top: 1.6rem;
+    transition: transform .3s;
+}
+
+.modal button:hover {
+    transform: scale(1.1);
+}
+
+/* Alert error */
+
+.alert-error.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0) ;
+}
+
+.alert-error {
+    position: absolute;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    color: var(--tt-error);
+    background: var(--bg-error);
+    top: 0;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: .8rem;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(-30px);
+    transition: transform .5s;
 }
