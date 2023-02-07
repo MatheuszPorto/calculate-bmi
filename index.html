@@ -6,17 +6,17 @@
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculadora de IMC</title>
+    <title>BMI Calculator</title>
 
     <link rel="stylesheet" href="./styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-    <script src="./script.js" defer></script>
+    <script src="./js/script.js" defer type="module"></script>
 </head>
 <body>
 
     <div class="alert-error">
-        Digite somente números
+        Enter numbers only
     </div>
 
     <div class="container">
@@ -24,10 +24,10 @@
         <main class="card">
             <form action="">
 
-                <h1 class="title">Cálculo de IMC</h1>
+                <h1 class="title">BMI Calculation</h1>
 
                 <div class="input-wrapper">
-                    <label for="weight">Peso (kg)</label>
+                    <label for="weight">Weight (kg)</label>
                     <input
                      id="weight"
                      type="number"
@@ -35,7 +35,7 @@
                 </div>
 
                 <div class="input-wrapper">
-                    <label for="height">Altura (m)</label>
+                    <label for="height">Height (cm)</label>
                     <input
                      id="height"
                      type="number"
@@ -43,8 +43,8 @@
                 </div>
 
                 <button type="submit">
-                    Calcular IMC 
-                    <img src="./assets/arrow-icon.svg" alt="desenho de seta">
+                    Calculate BMI 
+                    <img src="./assets/arrow-icon.svg" alt="arrow drawing">
                 </button>
 
             </form>
@@ -53,17 +53,15 @@
 
     <div class="modal-wrapper">
         <div class="modal card">
-
+            
+            <h2 class="title">
             <button
                 class="close">
                 <img src="./assets/close-icon.svg"
-                alt="ícone de um X">
+                alt="X icon">
             </button>
-
-            <h2 class="title"
-                >Seu IMC é de 28
+                <span>Your BMI is 28</span> 
             </h2>
-
 
         </div>
     </div>
